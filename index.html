@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listen Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .chapter-section {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .chapter-card {
+            width: 200px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .chapter-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .chapter-card h3 {
+            margin: 10px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button class="active">Listen</button>
+        <button onclick="window.location.href='solve.html'">Solve</button>
+    </div>
+        <h1>Audio</h1>
+        <div class="audio-container">
+            <audio controls>
+                <source src="audio/prologue_complete.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+</body>
+</html>

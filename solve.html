@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solve Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background: #ddd;
+        }
+        .header button {
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .active {
+            background-color: #007bff;
+            color: white;
+        }
+        .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .chapters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .chapter {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            border: 2px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .selected {
+            background-color: lightblue;
+        }
+        .story-selection {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 80px);
+            gap: 5px;
+            margin-top: 10px;
+        }
+        .grid div {
+            width: 80px;
+            height: 50px;
+            background-color: white;
+            border: 2px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .grid div.selected {
+            background-color: yellow;
+        }
+        .hidden {
+            display: none;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button onclick="window.location.href='index.html'">Listen</button>
+        <button class="active">Solve</button>
+    </div>
+    <div class="container">
+        <h2>Select a Chapter</h2>
+        <div class="chapters">
+            <div class="chapter" onclick="selectChapter(1)">1</div>
+            <div class="chapter" onclick="selectChapter(2)">2</div>
+            <div class="chapter" onclick="selectChapter(3)">3</div>
+        </div>
+        <div class="story-selection">
+            <h3>Select your Story Cards</h3>
+            <div class="grid">
+                <div onclick="selectStory(1)">1</div>
+                <div onclick="selectStory(2)">2</div>
+                <div onclick="selectStory(3)">3</div>
+                <div onclick="selectStory(4)">4</div>
+                <div onclick="selectStory(5)">5</div>
+                <div onclick="selectStory(6)">6</div>
+                <div onclick="selectStory(7)">7</div>
+                <div onclick="selectStory(8)">8</div>
+                <div onclick="selectStory(9)">9</div>
+            </div>
+        </div>
+        <button id="submitBtn" class="hidden" onclick="verifySelection()">Submit</button>
+        <p id="errorMessage" class="error hidden">Incorrect selection. Try again.</p>
+    </div>
+    <script>
+        let selectedChapter = null;
+        let selectedStories = [];
+        const correctAnswers = {
+            1: [1, 2, 3],
+            2: [4, 5, 6],
+            3: [7, 8, 9]
+        };
+        
+        function selectChapter(chapter) {
+            document.querySelectorAll('.chapter').forEach(c => c.classList.remove('selected'));
+            selectedChapter = chapter;
+            document.querySelector(`.chapters div:nth-child(${chapter})`).classList.add('selected');
+            selectedStories = []; // Reset story selection when switching chapters
+            updateStorySelection();
+        }
+        
+        function selectStory(story) {
+            if (selectedStories.includes(story)) {
+                selectedStories = selectedStories.filter(s => s !== story);
+            } else if (selectedStories.length < 3) {
+                selectedStories.push(story);
+            }
+            updateStorySelection();
+            document.getElementById('submitBtn').classList.remove('hidden');
+        }
+        
+        function updateStorySelection() {
+            document.querySelectorAll('.grid div').forEach(s => {
+                s.classList.remove('selected');
+                if (selectedStories.includes(parseInt(s.innerText))) {
+                    s.classList.add('selected');
+                }
+            });
+        }
+        
+        function verifySelection() {
+            if (selectedChapter && arraysMatch(selectedStories, correctAnswers[selectedChapter])) {
+                alert('Correct selection! Well done.');
+                document.getElementById('errorMessage').classList.add('hidden');
+            } else {
+                document.getElementById('errorMessage').classList.remove('hidden');
+            }
+        }
+        
+        function arraysMatch(arr1, arr2) {
+            return JSON.stringify(arr1) === JSON.stringify(arr2);
+        }
+document.querySelectorAll('.chapter').forEach(chapter => {
+    chapter.setAttribute('draggable', true);
+
+    chapter.addEventListener('dragstart', e => {
+        e.dataTransfer.setData('text/plain', e.target.innerText);
+        e.target.classList.add('dragging');
+    });
+
+    chapter.addEventListener('dragend', e => {
+        e.target.classList.remove('dragging');
+    });
+
+    chapter.addEventListener('dragover', e => {
+        e.preventDefault();
+        const dragging = document.querySelector('.dragging');
+        const current = e.target;
+        const container = document.querySelector('.chapters');
+        if (dragging !== current && current.classList.contains('chapter')) {
+            const chapters = Array.from(container.children);
+            const dragIndex = chapters.indexOf(dragging);
+            const currentIndex = chapters.indexOf(current);
+            if (dragIndex < currentIndex) {
+                container.insertBefore(dragging, current.nextSibling);
+            } else {
+                container.insertBefore(dragging, current);
+            }
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
