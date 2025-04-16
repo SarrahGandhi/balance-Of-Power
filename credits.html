@@ -61,8 +61,9 @@
         <p class="credit-name">
           Web Design & Interface – Sarrah Gandhi & Suman Rani
         </p>
+        <p class="credit-name">Lead Developer – Nitish Sharma</p>
         <p class="credit-name">QR Code Integration – Sonia Serrano</p>
-        <p class="credit-name">Web Development – Sri Vignesh & Nitish Sharma</p>
+        <p class="credit-name">Web Development – Srivignesh & Sonia Serrano</p>
       </section>
 
       <section class="closing-text">
@@ -144,6 +145,33 @@
         </ul>
       </div>
     </div>
-    <script src="js/nav.js"></script>
+      <script>
+	const hamburger = document.querySelector('.hamburger');
+	const nav = document.querySelector('.nav');
+	hamburger.addEventListener('click', () => {
+	  nav.classList.toggle('open');
+	});
+
+  const instructionsBtn = document.querySelector('a[href="#instructions"]');
+  const popup = document.getElementById("instructionsPopup");
+  const closeBtn = document.getElementById("closeInstructions");
+
+  if (instructionsBtn) {
+    instructionsBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      popup.style.display = "flex";
+    });
+  }
+
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+  </script>
   </body>
 </html>
