@@ -1,0 +1,121 @@
+.congratulations-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #0a1a1c;
+  color: #fff;
+  text-align: center;
+}
+
+.congratulations-content h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 196px;
+  color: #3d8c84;
+  margin-bottom: 1rem;
+  margin-top: 10px;
+}
+
+.congratulations-content h2 {
+  color: #b7944a;
+  text-align: center;
+  font-family: "Bebas Neue";
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.message {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.main-message {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.8rem;
+  color: #c4a24c;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.questions {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #c4a24c;
+  line-height: 1.8;
+  margin-bottom: 4rem;
+}
+
+.balance-shifted {
+  font-family: "Baskervville SC", serif;
+  font-size: 2rem;
+  color: #3d8c84;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1em;
+}
+
+.power-now {
+  font-family: "Baskervville SC", serif;
+  font-size: 2.5rem;
+  color: #3d8c84;
+  letter-spacing: 0.15em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .congratulations-content h1 {
+    font-size: 3rem;
+  }
+
+  .congratulations-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .main-message {
+    font-size: 1.4rem;
+  }
+
+  .questions {
+    font-size: 1.2rem;
+  }
+
+  .balance-shifted {
+    font-size: 1.6rem;
+  }
+
+  .power-now {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .congratulations-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .congratulations-content h2 {
+    font-size: 2rem;
+  }
+
+  .main-message {
+    font-size: 1.2rem;
+  }
+
+  .questions {
+    font-size: 1rem;
+  }
+
+  .balance-shifted {
+    font-size: 1.4rem;
+  }
+
+  .power-now {
+    font-size: 1.8rem;
+  }
+}
