@@ -44,22 +44,28 @@
                 <span class="lock-overlay" id="lock-3">🔒</span>
               </div>
         </div>
+        <div class="clues">
+          <h3 class="section-heading">SELECT 3 CLUE CARD IN ORDER</h3>
+          <div class="grid">
+            <div onclick="selectStory(1)"><img src="images/lesson/lesson_1/name_card_clue_1.png" alt="Card 1"></div>
+            <div onclick="selectStory(2)"><img src="images/lesson/lesson_1/family_clue_2.png" alt="Card 2"></div>
+            <div onclick="selectStory(3)"><img src="images/lesson/lesson_1/map_clue_3.png" alt="Card 3"></div>
+            <div onclick="selectStory(4)"><img src="images/lesson/lesson_2/cigar_clue_1.png" alt="Card 4"></div>
+            <div onclick="selectStory(5)"><img src="images/lesson/lesson_2/ICBM_clue_2.png" alt="Card 5"></div>
+            <div onclick="selectStory(6)"><img src="images/lesson/lesson_2/rosary_clue_3.png" alt="Card 6"></div>
+            <div onclick="selectStory(7)"><img src="images/lesson/lesson_3/zippo_clue_1.png" alt="Card 7"></div>
+            <div onclick="selectStory(8)"><img src="images/lesson/lesson_3/N98713_clue_2.png" alt="Card 8"></div>
+            <div onclick="selectStory(9)"><img src="images/lesson/lesson_3/flight_clue_3.png" alt="Card 9"></div>
+          </div>
 
-        <h3 class="section-heading">SELECT 3 CLUE CARD IN ORDER</h3>
-        <div class="grid">
-          <div onclick="selectStory(1)"><img src="images/lesson/lesson_1/name_card_clue_1.png" alt="Card 1"></div>
-          <div onclick="selectStory(2)"><img src="images/lesson/lesson_1/family_clue_2.png" alt="Card 2"></div>
-          <div onclick="selectStory(3)"><img src="images/lesson/lesson_1/map_clue_3.png" alt="Card 3"></div>
-          <div onclick="selectStory(4)"><img src="images/lesson/lesson_2/cigar_clue_1.png" alt="Card 4"></div>
-          <div onclick="selectStory(5)"><img src="images/lesson/lesson_2/ICBM_clue_2.png" alt="Card 5"></div>
-          <div onclick="selectStory(6)"><img src="images/lesson/lesson_2/rosary_clue_3.png" alt="Card 6"></div>
-          <div onclick="selectStory(7)"><img src="images/lesson/lesson_3/zippo_clue_1.png" alt="Card 7"></div>
-          <div onclick="selectStory(8)"><img src="images/lesson/lesson_3/N98713_clue_2.png" alt="Card 8"></div>
-          <div onclick="selectStory(9)"><img src="images/lesson/lesson_3/flight_clue_3.png" alt="Card 9"></div>
+          <button id="submitBtn" class="submit-btn hidden" onclick="verifySelection()">SUBMIT</button>
+          <p id="errorMessage" class="error hidden">Incorrect selection. Try again.</p>
         </div>
-
-        <button id="submitBtn" class="submit-btn hidden" onclick="verifySelection()">SUBMIT</button>
-        <p id="errorMessage" class="error hidden">Incorrect selection. Try again.</p>
+        <div class="solveChapter">
+          <button id="solveFinalBtn" class="submit-btn hidden" onclick="window.location.href='solve_chapters.html'">
+            Solve the Chapter
+          </button>
+       </div>
       </div>
     </section>
   </main>
@@ -151,6 +157,16 @@
         </audio>
       </p>
       <button id="closeBothSolvedPopup">CLOSE</button>
+    </div>
+  </div>
+  <div id="chapter3SolvedPopup" class="popup-overlay">
+    <div class="popup-box">
+      <p>
+        <audio id="chapter3Audio" preload="auto" controls>
+          <source src="audio/act3.mp3" type="audio/mpeg" />
+        </audio>
+      </p>
+      <button id="closeChapter3Popup">CLOSE</button>
     </div>
   </div>
   

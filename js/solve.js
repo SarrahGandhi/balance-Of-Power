@@ -27,12 +27,34 @@ let selectedChapter = null;
         document.getElementById("chapterLockPopup").style.display = "none";
     });
     document.getElementById("closeSolvedPopup").addEventListener("click", () => {
-        document.getElementById("chapterSolvedPopup").style.display = "none";
+      const audio = document.getElementById("chapterSolvedAudio");
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+      document.getElementById("chapterSolvedPopup").style.display = "none";
     });
+    
 
     document.getElementById("closeBothSolvedPopup").addEventListener("click", () => {
-        document.getElementById("bothChaptersSolvedPopup").style.display = "none";
+      const audio = document.getElementById("bothChaptersAudio");
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+      document.getElementById("bothChaptersSolvedPopup").style.display = "none";
     });
+
+    document.getElementById("closeChapter3Popup").addEventListener("click", () => {
+      const audio = document.getElementById("chapter3Audio");
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+      document.getElementById("chapter3SolvedPopup").style.display = "none";
+    });
+    
+    
     function selectStory(story) {
       if (selectedStories.includes(story)) {
         selectedStories = selectedStories.filter(s => s !== story);
@@ -71,7 +93,7 @@ let selectedChapter = null;
             const chap1Done = getCookie("chapter1_completed") === "true";
             const chap2Done = getCookie("chapter2_completed") === "true";
 
-            if (chap1Done && chap2Done) {
+            if (chap1Done && chap2Done && selectedChapter !== 3) {
               const lock = document.getElementById("lock-3");
               if (lock) lock.style.display = "none";
               document.querySelectorAll('.chapter')[2].classList.remove("locked");
@@ -91,11 +113,30 @@ let selectedChapter = null;
             
               
               
-              if (selectedChapter === 3) {
-                setTimeout(() => {
-                  window.location.href = "solve_chapters.html";
-                }, 1000); 
-              } else if (!(chap1Done && chap2Done)) {
+            if (selectedChapter === 3) {
+              const popup = document.getElementById("chapter3SolvedPopup");
+              const audio = document.getElementById("chapter3Audio");
+              const cluesSection = document.querySelector(".clues");
+              const solveBtn = document.getElementById("solveFinalBtn");
+            
+              if (popup && audio) {
+                popup.style.display = "flex";
+                audio.currentTime = 0;
+                audio.play();
+              }
+            
+              if (cluesSection) {
+                cluesSection.style.display = "none";
+                console.log("Hiding clues section");
+              }
+            
+              if (solveBtn) {
+                solveBtn.classList.remove("hidden");
+                solveBtn.style.setProperty("display", "block", "important");
+              }
+            }
+            
+             else if (!(chap1Done && chap2Done)) {
                 const title = document.getElementById("chapterCompleteTitle");
                 if (title) {
                   title.textContent = `ACT ${selectedChapter} - Complete`;
@@ -166,6 +207,16 @@ function unlockChapter3IfReady() {
   }
 }
 function showChapterSolvedPopup(chapterNumber) {
+  if (chapterNumber === 3) {
+    const popup = document.getElementById("chapter3SolvedPopup");
+    const audio = document.getElementById("chapter3Audio");
+    if (popup && audio) {
+      popup.style.display = "flex";
+      audio.currentTime = 0;
+      audio.play();
+    }
+    return; // ✅ Prevent any further execution
+  }
   const chap1Done = getCookie("chapter1_completed") === "true";
   const chap2Done = getCookie("chapter2_completed") === "true";
 

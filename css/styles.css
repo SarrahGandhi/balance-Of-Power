@@ -461,6 +461,22 @@ body {
 .chapter-sort-page button.submit-btn:hover {
   background-color: #c89b4d;
 }
+
+
+.order-label {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background-color: #d6ad60;
+  color: #042524;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 4px 8px;
+  border-radius: 50%;
+}
+.solveChapter .submit-btn{
+  margin: 30px auto;
+}
   /* -------------------
      MOBILE STYLES
   -------------------- */
@@ -548,6 +564,23 @@ body {
           .submit-btn {
             padding: 10px 30px;
             font-size: 1rem;
+          }
+          .chapter-sort-page .chapter-container {
+            display: grid;
+            justify-content: center;
+            align-items: flex-start;
+            grid-template-columns: auto auto;
+            gap: 30px;  
+            padding: 20px;
+            flex-wrap: nowrap;
+          }
+          
+          .chapter-sort-page .chapter {
+            width: 160px;
+            height: 240px;
+            flex-shrink: 0;
+            cursor: grab;
+            transition: transform 0.2s ease;
           }
   }
   
