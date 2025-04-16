@@ -64,8 +64,9 @@ audio.addEventListener("ended", () => {
   isPlaying = false;
 });
 
+// Handle both #instructions and instructions.html links
 const instructionsBtn = document.querySelector(
-  'a[href="../instructions.html"]'
+  'a[href="#instructions"], a[href="../instructions.html"]'
 );
 const popup = document.getElementById("instructionsPopup");
 const closeBtn = document.getElementById("closeInstructions");

@@ -650,3 +650,76 @@ a {
     font-size: 1.1rem;
   }
 }
+
+/* Instructions Page Styles */
+.instructions-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #d4b88c;
+  font-family: "Baskervville", serif;
+  text-align: left;
+}
+
+.instructions-content h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #d4b88c;
+  font-family: "Baskervville", serif;
+}
+
+.instructions-content h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #d4b88c;
+  font-family: "Baskervville", serif;
+}
+
+.instructions-content ul,
+.instructions-content ol {
+  padding-left: 20px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.instructions-content li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.instructions-content p {
+  margin: 12px 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.instructions-content .intro-sc {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .instructions-content {
+    padding: 1rem;
+  }
+
+  .instructions-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .instructions-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .instructions-content ul,
+  .instructions-content ol,
+  .instructions-content p {
+    font-size: 1rem;
+  }
+}
