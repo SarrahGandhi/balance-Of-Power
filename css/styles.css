@@ -2,244 +2,244 @@
    GLOBAL STYLES
 -------------------- */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Bebas Neue', sans-serif;
-    background-color: #042524;
-    color: #d6ad60;
-    text-align: center;
-  }
-  
-  a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  .nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* -------------------
+  margin: 0;
+  padding: 0;
+  font-family: "Bebas Neue", sans-serif;
+  background-color: #042524;
+  color: #d6ad60;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------
      NAVIGATION
   -------------------- */
-  .nav {
-    padding: 30px;
-    background-color: #011715;
-    position: relative;
-  }
-  
-  .nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    color: white;
-    transition: max-height 0.3s ease;
-  }
-  
-  .nav li a {
-    font-family: 'Baskervville', serif;
-    font-size: 1.2rem;
-    font-weight: normal;
-    letter-spacing: 0.5px;
-    color: white;
-    text-transform: uppercase;
-  }
-  
-  .nav li a:hover {
-    color: #d6ad60;
-  }
-  
-  /* Hamburger Icon */
-  .hamburger {
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-  }
-  
-  /* -------------------
+.nav {
+  padding: 30px;
+  background-color: #011715;
+  position: relative;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: white;
+  transition: max-height 0.3s ease;
+}
+
+.nav li a {
+  font-family: "Baskervville", serif;
+  font-size: 1.2rem;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.nav li a:hover {
+  color: #d6ad60;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+/* -------------------
      MAIN TITLE
   -------------------- */
-  .title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 6rem;
-    letter-spacing: 1px;
-    background: linear-gradient(to top, #138480, #054949);
-    -webkit-background-clip: text;
-    color: transparent;
-    margin-top: 50px;
-    margin-bottom: 10px;
-  }
-  
-  .subtitle {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    color: #d6ad60;
-    font-size: 1.4rem;
-    margin-bottom: 60px;
-  }
-  
-  /* -------------------
+.title {
+  font-family: "Oswald", sans-serif;
+  font-size: 6rem;
+  letter-spacing: 1px;
+  background: linear-gradient(to top, #138480, #054949);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  color: #d6ad60;
+  font-size: 1.4rem;
+  margin-bottom: 60px;
+}
+
+/* -------------------
      AUDIO SECTION
   -------------------- */
-  .audio-section h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 2rem;
-    color: #d6ad60;
-    margin-bottom: 25px;
-  }
-  
-  .audio-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-    padding: 0 20px;
-  }
-  
-  /* Custom Audio Player */
-  .custom-audio-player {
-    border: 2px solid #d6ad60;
-    padding: 15px 25px;
-    width: 90%;
-    max-width: 600px;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    margin: 50px auto;
-  }
-  
-  .custom-audio-player img {
-    width: 40px;
-    height: auto;
-    cursor: pointer;
-  }
-  
-  .custom-audio-player input[type="range"] {
-    flex-grow: 1;
-    height: 4px;
-    background: #d6d6d6;
-    appearance: none;
-    border-radius: 2px;
-    outline: none;
-  }
-  
-  .custom-audio-player input[type="range"]::-webkit-slider-thumb {
-    appearance: none;
-    width: 0;
-    height: 0;
-  }
-  
-  #timeDisplay {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.2rem;
-    color: #d6ad60;
-    letter-spacing: 1px;
-  }
+.audio-section h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  color: #d6ad60;
+  margin-bottom: 25px;
+}
 
-  /* ------------------
+.audio-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+/* Custom Audio Player */
+.custom-audio-player {
+  border: 2px solid #d6ad60;
+  padding: 15px 25px;
+  width: 90%;
+  max-width: 600px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 50px auto;
+}
+
+.custom-audio-player img {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+}
+
+.custom-audio-player input[type="range"] {
+  flex-grow: 1;
+  height: 4px;
+  background: #d6d6d6;
+  appearance: none;
+  border-radius: 2px;
+  outline: none;
+}
+
+.custom-audio-player input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 0;
+  height: 0;
+}
+
+#timeDisplay {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  color: #d6ad60;
+  letter-spacing: 1px;
+}
+
+/* ------------------
     Instruction Styles
   ---------------------*/
-  .instructions-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-  }
-  
-  .instructions-popup .popup-content {
-    background-color: #d6b375;
-    width: 90%;
-    max-width: 700px;
-    max-height: 90vh;
-    overflow-y: auto;
-    padding: 30px;
-    border-radius: 8px;
-    font-family: 'Baskervville', serif;
-    color: #1b1b1b;
-    text-align: left;
-    position: relative;
-    box-shadow: 0 0 15px #000000aa;
-    line-height: 1.7;
-  }
-  
-  .instructions-popup h2 {
-    text-align: center;
-    font-size: 1.7rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #1b5e57;
-    font-family: 'Baskervville', serif;
-  }
-  
-  .instructions-popup h3 {
-    margin-top: 25px;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-    color: #1b1b1b;
-    font-family: 'Baskervville', serif;
-  }
-  
-  .instructions-popup ul,
-  .instructions-popup ol {
-    padding-left: 20px;
-    margin-bottom: 15px;
-    font-size: 1rem;
-    font-family: 'Baskervville', serif;
-  }
-  
-  .instructions-popup li {
-    margin-bottom: 6px;
-  }
-  
-  .instructions-popup p {
-    margin: 12px 0;
-    font-size: 1rem;
-    font-family: 'Baskervville', serif;
-  }
-  
-  .instructions-popup .close-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    color: #333;
-  }
-  .intro-sc {
-    font-family: 'Baskervville SC', serif !important;
-    text-align: center;
-    font-size: 1rem;
-    margin-bottom: 20px;
-    letter-spacing: 0.5px;
-    color: #1b1b1b;
-  }
-  /* -------------------
+.instructions-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.201);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.instructions-popup .popup-content {
+  background-color: #d6b375;
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  border-radius: 8px;
+  font-family: "Baskervville", serif;
+  color: #1b1b1b;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 0 15px #000000aa;
+  line-height: 1.7;
+}
+
+.instructions-popup h2 {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1b5e57;
+  font-family: "Baskervville", serif;
+}
+
+.instructions-popup h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #1b1b1b;
+  font-family: "Baskervville", serif;
+}
+
+.instructions-popup ul,
+.instructions-popup ol {
+  padding-left: 20px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  font-family: "Baskervville", serif;
+}
+
+.instructions-popup li {
+  margin-bottom: 6px;
+}
+
+.instructions-popup p {
+  margin: 12px 0;
+  font-size: 1rem;
+  font-family: "Baskervville", serif;
+}
+
+.instructions-popup .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+.intro-sc {
+  font-family: "Baskervville SC", serif !important;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  color: #1b1b1b;
+}
+/* -------------------
    SOLVE PAGE SECTION
 -------------------- */
 .section-heading {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   color: #d6ad60;
   font-size: 1.3rem;
   letter-spacing: 1px;
@@ -301,7 +301,7 @@ body {
 .submit-btn {
   background-color: #d6ad60;
   color: #000;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   padding: 12px 40px;
   font-size: 1.2rem;
   border: none;
@@ -378,7 +378,7 @@ body {
   max-width: 700px;
   text-align: center;
   border-radius: 6px;
-  font-family: 'Baskervville', serif;
+  font-family: "Baskervville", serif;
   color: #01443b;
   font-size: 1.3rem;
   line-height: 1.7;
@@ -388,7 +388,7 @@ body {
 .popup-box button {
   background-color: #042524;
   color: #d6ad60;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   padding: 10px 30px;
   font-size: 1.2rem;
   border: none;
@@ -409,7 +409,7 @@ body {
   padding: 40px 20px;
   background-color: #042524;
   text-align: center;
-  font-family: 'Baskervville', serif;
+  font-family: "Baskervville", serif;
   color: white;
 }
 .chapter-sort-page .chapter-container {
@@ -454,100 +454,199 @@ body {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-weight: bold;
 }
 
 .chapter-sort-page button.submit-btn:hover {
   background-color: #c89b4d;
 }
-  /* -------------------
+/* -------------------
      MOBILE STYLES
   -------------------- */
-  @media (max-width: 768px) {
-    .nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        max-height: 0;
-        overflow: hidden;
-        background-color: #011715;
-        }
-        
-        .nav.open ul {
-        max-height: 300px;
-        padding: 20px 0;
-        }
-        
-        /* Hamburger icon visible */
-        .hamburger {
-        display: flex;
-        }
-        
-        /* Title */
-        .title {
-            font-size: 75px;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            line-height: 88px;
-        }
-        
-        /* Subtitle */
-        .subtitle {
-        font-size: 2rem;
-        padding: 0 15px;
-        margin-bottom: 40px;
-        line-height: 1.4;
-        }
-        
-        /* Prologue Header */
-        .audio-section h2 {
-        font-size: 3rem;
-        margin-top: 30px;
-        margin-bottom: 20px;
-        }
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #011715;
+  }
 
-        .audio-section 
+  .nav.open ul {
+    max-height: 300px;
+    padding: 20px 0;
+  }
+
+  /* Hamburger icon visible */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Title */
+  .title {
+    font-size: 75px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 88px;
+  }
+
+  /* Subtitle */
+  .subtitle {
+    font-size: 2rem;
+    padding: 0 15px;
+    margin-bottom: 40px;
+    line-height: 1.4;
+  }
+
+  /* Prologue Header */
+  .audio-section h2 {
+    font-size: 3rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .audio-section 
         
         /* Audio player alignment */
         .custom-audio-player {
-        width: 80%;
-        padding: 10px 15px;
-        gap: 12px;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        margin: 0 auto;
-        }
-        
-        .custom-audio-player img {
-        width: 30px;
-        }
-        
-        #timeDisplay {
-        font-size: 0.9rem;
-        }
-        .instructions-popup .popup-content {
-            width: 90%;
-            padding: 20px;
-            font-size: 0.95rem;
-          }
-        
-          .instructions-popup h2 {
-            font-size: 1.4rem;
-          }
-        
-          .instructions-popup h3 {
-            font-size: 1rem;
-          }
-          .chapter, .grid div {
-            width: 100px;
-            height: 150px;
-          }
-        
-          .submit-btn {
-            padding: 10px 30px;
-            font-size: 1rem;
-          }
+    width: 80%;
+    padding: 10px 15px;
+    gap: 12px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
   }
-  
+
+  .custom-audio-player img {
+    width: 30px;
+  }
+
+  #timeDisplay {
+    font-size: 0.9rem;
+  }
+  .instructions-popup .popup-content {
+    width: 90%;
+    padding: 20px;
+    font-size: 0.95rem;
+  }
+
+  .instructions-popup h2 {
+    font-size: 1.4rem;
+  }
+
+  .instructions-popup h3 {
+    font-size: 1rem;
+  }
+  .chapter,
+  .grid div {
+    width: 100px;
+    height: 150px;
+  }
+
+  .submit-btn {
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+}
+
+/* Credits Page Styles */
+.credits-content {
+  padding: 2rem;
+  margin: 0 auto;
+  color: #d4b88c;
+  text-align: center;
+  font-family: "Baskervville", serif;
+}
+
+.credits-content h1 {
+  color: #3b7b74;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-family: "Bebas Neue";
+  font-size: 196px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 0px;
+}
+
+.credits-content h2 {
+  font-size: 40px;
+  color: #d4b88c;
+  font-family: "Baskervville", serif;
+  font-style: italic;
+  margin-top: 0px;
+}
+
+.credit-category {
+  color: #b7944a;
+  text-align: center;
+  font-family: Baskervville;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 80px;
+}
+
+.credit-name {
+  color: #b7944a;
+  text-align: center;
+  font-family: Baskerville;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.credit-roles {
+  color: #b7944a;
+  font-family: Baskerville;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+.credit-additional {
+  color: #d4b88c;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 0.25rem 0;
+}
+
+.closing-text {
+  margin-top: 4rem;
+  font-style: italic;
+  color: #d4b88c;
+  line-height: 1.8;
+}
+
+.closing-text p {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .credits-content h1 {
+    font-size: 3rem;
+  }
+
+  .credits-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .credit-name,
+  .credit-roles,
+  .credit-additional {
+    font-size: 1.1rem;
+  }
+}

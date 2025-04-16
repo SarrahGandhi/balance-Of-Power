@@ -1,9 +1,8 @@
-const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('.nav');
-hamburger.addEventListener('click', () => {
-  nav.classList.toggle('open');
+const hamburger = document.querySelector(".hamburger");
+const nav = document.querySelector(".nav");
+hamburger.addEventListener("click", () => {
+  nav.classList.toggle("open");
 });
-
 
 const audio = document.getElementById("audio");
 const playBtn = document.getElementById("playPauseBtn");
@@ -13,8 +12,12 @@ const timeDisplay = document.getElementById("timeDisplay");
 let isPlaying = false;
 
 function formatTime(seconds) {
-  const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
-  const secs = Math.floor(seconds % 60).toString().padStart(2, '0');
+  const mins = Math.floor(seconds / 60)
+    .toString()
+    .padStart(2, "0");
+  const secs = Math.floor(seconds % 60)
+    .toString()
+    .padStart(2, "0");
   return `${mins}:${secs}`;
 }
 
@@ -28,7 +31,7 @@ window.addEventListener("DOMContentLoaded", () => {
   audio.load();
   setTimeout(() => {
     setInitialDuration();
-  }, 300); 
+  }, 300);
 });
 
 playBtn.addEventListener("click", () => {
@@ -61,23 +64,23 @@ audio.addEventListener("ended", () => {
   isPlaying = false;
 });
 
-  const instructionsBtn = document.querySelector('a[href="#instructions"]');
-  const popup = document.getElementById("instructionsPopup");
-  const closeBtn = document.getElementById("closeInstructions");
+const instructionsBtn = document.querySelector('a[href="instructions.html"]');
+const popup = document.getElementById("instructionsPopup");
+const closeBtn = document.getElementById("closeInstructions");
 
-  if (instructionsBtn) {
-    instructionsBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      popup.style.display = "flex";
-    });
-  }
+if (instructionsBtn) {
+  instructionsBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    popup.style.display = "flex";
+  });
+}
 
-  closeBtn.addEventListener("click", () => {
+closeBtn.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === popup) {
     popup.style.display = "none";
-  });
-
-  window.addEventListener("click", (e) => {
-    if (e.target === popup) {
-      popup.style.display = "none";
-    }
-  });
+  }
+});
